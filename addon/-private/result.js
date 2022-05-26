@@ -8,11 +8,11 @@ import EmberObject, {
   set,
   get
 } from '@ember/object';
+import { readOnly } from '@ember/object/computed';
+
 import ResultCollection from '../validations/result-collection';
 import WarningResultCollection from '../validations/warning-result-collection';
 import InternalResultObject from './internal-result-object';
-
-const { readOnly } = computed;
 
 /**
  * __PRIVATE__
@@ -263,7 +263,10 @@ const Result = EmberObject.extend({
    */
   _handlePromise() {
     get(this, '_promise')
-      .then(value => this.update(value), value => this.update(value))
+      .then(
+        value => this.update(value),
+        value => this.update(value)
+      )
       .catch(reason => {
         // TODO: send into error state
         throw reason;
