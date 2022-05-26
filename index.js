@@ -20,7 +20,24 @@ module.exports = {
 
     return {
       name: 'v-get',
-      plugin: VGet,
+      plugin: context => {
+        const vGet = new VGet(context);
+
+        return {
+          name: 'v-get',
+          visitor: {
+            BlockStatement(node) {
+              vGet.processNode(node);
+            },
+            MustacheStatement(node) {
+              vGet.processNode(node);
+            },
+            ElementNode(node) {
+              vGet.processNode(node);
+            }
+          }
+        };
+      },
       baseDir: function() {
         return __dirname;
       }

@@ -63,23 +63,9 @@
 
 /* eslint-env node */
 
-function VGet(options) {
-  this.options = options;
-  this.syntax = null; // set by HTMLBars
+function VGet(context) {
+  this.syntax = context.syntax;
 }
-
-VGet.prototype.transform = function(ast) {
-  var context = this;
-  var walker = new this.syntax.Walker();
-
-  walker.visit(ast, function(node) {
-    if (context.validate(node)) {
-      context.processNode(node);
-    }
-  });
-
-  return ast;
-};
 
 VGet.prototype.validate = function(node) {
   return (
