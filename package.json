@@ -1,6 +1,6 @@
 {
   "name": "ember-cp-validations",
-  "version": "4.0.0-imd",
+  "version": "4.0.1-imd",
   "description": "Ember computed property based validation library",
   "scripts": {
     "build": "ember build",
