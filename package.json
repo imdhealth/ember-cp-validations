@@ -97,7 +97,6 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.26.11",
-    "ember-require-module": "imdhealth/ember-require-module#0.3.1",
     "ember-validators": "^4.1.2"
   },
   "ember-addon": {

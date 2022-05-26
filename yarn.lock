@@ -5345,12 +5345,6 @@ ember-ref-modifier@^0.1.2:
     ember-cli-babel "^7.10.0"
     ember-modifier-manager-polyfill "^1.0.1"
 
-ember-require-module@imdhealth/ember-require-module#0.3.1:
-  version "0.3.1"
-  resolved "https://codeload.github.com/imdhealth/ember-require-module/tar.gz/08b63f17d252fba5562f4564e7db57498ce7b61e"
-  dependencies:
-    ember-cli-babel "^7.26.11"
-
 ember-resolver@^5.0.1:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/ember-resolver/-/ember-resolver-5.3.0.tgz#9fbeedfa63c094b588ac7647ba62f1305374f1d8"
